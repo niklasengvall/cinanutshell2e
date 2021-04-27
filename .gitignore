@@ -1,3 +1,5 @@
+# Exclude vscode files
+.vscode/*
 
 # Prerequisites
 *.d
