@@ -2,7 +2,7 @@
 .vscode/*
 
 # Exclude compiled stuff
-output/*
+output/*.out
 
 # Prerequisites
 *.d
