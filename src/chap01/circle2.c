@@ -15,6 +15,13 @@
 // Description: Calculate and print the areas of 2 different circles
 //              Uses circulararea.c for the math
 
+// Additional information:
+// Compile this file together with circulararea using following bash command:
+// Release: cc circle2.c circulararea.c -o ../../output/circle2.out -O3 -Wall -std=c17 -Wno-missing-braces
+// Debug:   cc circle2.c circulararea.c -o ../../output/circle2.out -g -O3 -Wall -std=c17 -Wno-missing-braces
+// The commandlines above works if your working directory is chapXX (XX = chapternumber)
+// Run file with ../../output/circle2.out
+
 #include <stdio.h>                   // Preprocessor directive
 
 double circularArea( double );       // Function declaration (prototype simplified form)
