@@ -1,6 +1,6 @@
 // Codelisting: Example 1-1. A simple C program
 // Page:        5
-//
+
 // Attribution: C in a Nutshell, 2nd Edition by Peter Prinz and Tony Crawford (Oeilly).
 //              © 2016 Peter Prinz, Tony Crawford, 978-1-491-90475-6
 
@@ -41,8 +41,9 @@ int main()                           // Definition of main() begins
 // Created:      2021-04-28, Peter Prinz, Tony Crawford
 // Updated:      2021-04-28, Niklas Engvall
 // Version:      1.1.2 
-// Description:  Calculates the area of a circle
 
+// Description:  Calculates the area of a circle
+// Called by:    main() in this file
 // Parameter:    double r - The radius of the circle
 // Return value: double - The area of the circle
 
