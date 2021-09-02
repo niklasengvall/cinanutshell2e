@@ -3,12 +3,12 @@
 Here I have all the sourcecode from the book C in a Nutchell 2e  
 Some of the examples I have recoded, added some features and comments.  
 ## How I put this to work
-My OS is Ubuntu linux 20.10.  
+My OS is Linux Mint 20.2  
 I use latest VS Code editor with following extensions, Better C++ Syntax, Bracket Pair Colorizer 2, C/C++, Code Runner, GitHub Pull Requests and Issues, GitLens - Git supercharged and Insert-special-symbol  
 
 I have also installed the packages build-essential, manpages-dev, gcc-10 and g++-10  
 
-### My use of version of this project:
+### My use of version tags of this project:
 I initially used the command git tag -a "v0.4.5-build" -m "version v0.4.5-build"
 
 Where [major] or 0 as it is now, I'll increment this to 1 when I've completed to comment and test all the examples in the book.
