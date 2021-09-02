@@ -4,4 +4,4 @@ echo -e "What file do you want to compile & run, no extension please?"
 read file
 source="src/${file}.c"
 destination="output/${file}.out"
-gcc-10 $source -o $destination -O3 -Wall -std=c17 -Wno-missing-braces
+gcc-10 $source -o $destination -DNDEBUG -O3 -Wall -Wextra -Wpedantic -std=c17 -Wno-missing-braces

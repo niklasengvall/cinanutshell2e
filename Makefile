@@ -1,4 +1,5 @@
-#
+# I'm not really using this file
+
 # 'make'        build executable file 'main'
 # 'make clean'  removes all .o and executable files
 #
@@ -7,7 +8,7 @@
 CC = gcc-10
 
 # define any compile-time flags
-CFLAGS	:= -Wall -Wextra -O3 -g
+CFLAGS	:= -Wall -Wextra -Wpedantic -Wno-missing-braces -g -Og -std=c17
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify

@@ -6,7 +6,7 @@
 
 // File:        circulararea.c 
 // Created:     2021-04-28 
-// Updated:     2021-04-28
+// Updated:     2021-09-02
 // Revised by:  Niklas Engvall
 
 // Fuction:     circularArea( double r )
@@ -15,13 +15,12 @@
 // Version:     1.1.2 
 
 // Description:  Calculates the area of a circle
-
 // Called by:    main() in circle2.c
 // Parameter:    double r - The radius of the circle
 // Return value: double - The area of the circle
 
 double circularArea( double r )      // Definition of circularArea() begins
 {
-   const double pi = 3.1415926536;   // Pi is a constant
-   return pi * r * r;  // Formula for a circles area is πr²
+    const double pi = 3.1415926536;   // Pi is a constant
+    return pi * r * r;  // Formula for a circles area is πr²
 }

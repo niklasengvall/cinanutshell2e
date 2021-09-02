@@ -3,6 +3,7 @@
 
 # Exclude compiled stuff
 output/*.out
+*.out
 
 # Prerequisites
 *.d

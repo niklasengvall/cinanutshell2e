@@ -6,10 +6,16 @@
 
 // File:        circle.c 
 // Created:     2021-04-28 
-// Updated:     2021-04-28
+// Updated:     2021-09-02
 // Revised by:  Niklas Engvall
 
 // Description: Calculate and print the areas of 2 different circles
+
+// Additional information
+// Compile this file using following bash command:
+// Release: gcc circle.c -o circle.out -O3 -Wall -Wextra -Wpedantic -Wno-missing-braces -std=c17
+// Debug:   gcc gcc circle.c -o circle.out -g -Og -Wall -Wextra -Wpedantic -Wno-missing-braces -std=c17
+// Run file with ./circle2.out
 
 #include <stdio.h>                   // Preprocessor directive
 
@@ -17,24 +23,24 @@ double circularArea( double );       // Function declaration (prototype simplifi
 
 int main()                           // Definition of main() begins
 {
-   // Variable declarations and Initialization
-   double radius = 1.0, area = 0.0;
+    // Variable declarations and Initialization
+    double radius = 1.0, area = 0.0;
 
-   // Output headlines
-   printf( "\nAreas of Circles\n\n" ); // \n adds a newline
-   printf( "Radius      Area\n"
+    // Output headlines
+    printf( "\nAreas of Circles\n\n" ); // \n adds a newline
+    printf( "Radius      Area\n"
            "----------------\n" );
 
-   // Calculate and print the result for the 1st circle
-   area = circularArea( radius );
-   printf( "%6.1f %9.2f\n", radius, area ); // %6.1f formats the double value with space for a value with 6 significant numbers, including 1 decimal
+    // Calculate and print the result for the 1st circle
+    area = circularArea( radius );
+    printf( "%6.1f %9.2f\n", radius, area ); // %6.1f formats the double value with space for a value with 6 significant numbers, including 1 decimal
 
-   // Change radius, calculate and print the result for the 2nd circle
-   radius = 5.0;
-   area = circularArea( radius );
-   printf( "%6.1f %9.2f\n\n", radius, area ); // %8.2f formats the double value with space for a value with 8 significant numbers, including 2 decimals
+    // Change radius, calculate and print the result for the 2nd circle
+    radius = 5.0;
+    area = circularArea( radius );
+    printf( "%6.1f %9.2f\n\n", radius, area ); // %8.2f formats the double value with space for a value with 8 significant numbers, including 2 decimals
    
-   return 0; // Returns zero to the process that called this function (often your operating system)
+    return 0; // Returns zero to the process that called this function (often your operating system)
 }
 
 // Fuction:      circularArea( double r )
@@ -49,6 +55,6 @@ int main()                           // Definition of main() begins
 
 double circularArea( double r )      // Definition of circularArea() begins
 {
-   const double pi = 3.1415926536;   // Pi is a constant
-   return pi * r * r;  // Formula for a circles area is πr²
+    const double pi = 3.1415926536;   // pi is a constant
+    return pi * r * r;  // Formula for a circles area is πr²
 }
