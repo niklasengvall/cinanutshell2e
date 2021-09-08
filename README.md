@@ -18,5 +18,5 @@ Where [patch] or 5 as it is now, will increment as soon as I add an example or c
 
 Behind the build text you  number you will se what commit I'm on and it's hash number.
 
-Happy coding, 02.09.2021
+Happy coding, 08.09.2021
 Niklas Engvall
