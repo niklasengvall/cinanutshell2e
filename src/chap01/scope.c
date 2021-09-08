@@ -30,7 +30,7 @@ int main()
     if( x < 0 )           // Here x refers to the block declared long x variable
     {
         float x = 0.0F;   // Declare a new block float x variable, this line won't execute due to x is not lesser than 0 
-                          // Compiler can throw warninga about this, just ignore those for now
+                          // Compiler can return warnings/problems about this, just ignore those for now
     }
     
     x *= 2;               // Here x again refers to the block declared long x variable
