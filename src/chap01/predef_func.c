@@ -15,6 +15,7 @@
 
 #include <stdio.h> // Preprocessor directive
 #include <stdlib.h> // includes the exit function
+
 // Test function that test if the argument is an null pointer
 int test_func( char *s)
 {
