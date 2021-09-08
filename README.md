@@ -1,4 +1,4 @@
-# Codeexamples from C in a Nutshell, 2nd edition
+# Code examples from C in a Nutshell, 2nd edition
 
 Here I have all the sourcecode from the book C in a Nutchell 2e  
 Some of the examples I have recoded, added some features and comments.
