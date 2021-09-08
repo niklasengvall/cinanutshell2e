@@ -16,7 +16,7 @@ Where [major] or 0 as it is now, I'll increment this to 1 when I've completed to
 Where [minor] or 4 as it is now, increments with 1 as soon as I've completed one more example that is uppdated with comment's and tested as well.
 Where [patch] or 5 as it is now, will increment as soon as I add an example or change something in an existing example.
 
-Behind the build text you  number you will se what commit I'm on and a it's hash number.
+Behind the build text you  number you will se what commit I'm on and it's hash number.
 
 Happy coding, 02.09.2021
 Niklas Engvall
