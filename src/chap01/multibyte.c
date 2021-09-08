@@ -5,8 +5,8 @@
 //              © 2016 Peter Prinz, Tony Crawford, 978-1-491-90475-6
 
 // File:        multibyte.c 
-// Created:     2021-04-28 
-// Updated:     2021-09-02
+// Created:     2021-09-02 
+// Updated:     2021-09-08
 // Revised by:  Niklas Engvall
 
 // Description: An example where I convert UTF-8 text in hexadecimal format to a 
