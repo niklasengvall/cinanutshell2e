@@ -11,7 +11,7 @@
 				"-Wall",
 				"-Wextra",
 				"-Wpedantic",
-				"-std=c20",
+				"-std=c2x",
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}.out"
@@ -37,7 +37,7 @@
 				"-Wall",
 				"-Wextra",
 				"-Wpedantic",
-				"-std=c20",
+				"-std=c2x",
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}.out"
