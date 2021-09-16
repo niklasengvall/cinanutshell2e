@@ -1,32 +1,65 @@
-// Example 2-2. Illustrating the precision of type float  
-// precision.c
+// Codelisting: Example 2-2. Illustrating the precision of type float
+// Page:        28 <-- correct this
+//
+// Attribution: C in a Nutshell, 2nd Edition by Peter Prinz and Tony Crawford (Oeilly).
+//              © 2016 Peter Prinz, Tony Crawford, 978-1-491-90475-6
+
+// File:        precision.c 
+// Created:     2021-04-28 
+// Updated:     2021-09-15
+// Revised by:  Niklas Engvall
+
+// Description: Prints characteritics of the types float and double
+//              I've added some code to illustrate the data type double
+
 
 #include <stdio.h>
 #include <float.h>
 
 int main()
 {
-   puts("\nCharacteristics of the type float\n");
+    puts("\nCharacteristics of the types float and double\n\n");
 
-   printf("Storage size: %d bytes\n"
-          "Smallest positive value: %E\n"
-          "Greatest positive value: %E\n"
-          "Precision: %d decimal digits\n",
-          sizeof(float), FLT_MIN, FLT_MAX, FLT_DIG);
+    double d_var = 12345.6;            // A variable of type double.
+    float f_var = (float) d_var;       // Initializes the float
+                                       // variable with the value of d_var.
+    
+    long double d_var2 = 3.141592653589793;  // A variable of type long double with 15 decimals
+    double f_var2 = (double) d_var2;   // Initializes the double 
+                                       // variable with the value of d_var2.
 
-   puts("\nAn example of float precision:\n");
-   double d_var = 12345.6;          // A variable of type double.
-   float f_var = (float)d_var;      // Initializes the float
-                                    // variable with the value of d_var.
-   printf("The floating-point number    "
-          "%18.10f\n", d_var);
-   printf("has been stored in a variable\n"
-          "of type float as the value   "
-          "%18.10f\n", f_var);
-   printf("The rounding error is        "
-          "%18.10f\n", d_var - f_var);
+    printf( "FLOAT\n"
+            "Storage size: %ld bytes\n" \
+            "Smallest positive value: %E\n" \
+            "Greatest positive value: %E\n" \
+            "Precision: %d decimal digits\n",
+            sizeof(float), FLT_MIN, FLT_MAX, FLT_DIG);
 
-   return 0;
+    puts(" \nAn example of float precision:\n" );
+    printf( "The floating-point number    "
+            "%18.10f\n", d_var);
+    printf( "has been stored in a variable\n"
+            "of type float as the value   "
+            "%18.10f\n", f_var);
+    printf( "The rounding error is        "
+            "%18.10f\n\n\n", d_var - f_var);
+
+    printf( "DOUBLE\n"
+            "Storage size: %ld bytes\n"
+            "Smallest positive value: %E\n"
+            "Greatest positive value: %E\n"
+            "Precision: %d decimal digits\n",
+            sizeof(double), DBL_MIN, DBL_MAX, DBL_DIG);
+
+    puts(" \nAn example of double precision:\n" );
+    printf( "The floating-point number    "
+            "%18.15Lf\n", d_var2);
+    printf( "has been stored in a variable\n"
+            "of type double as the value  "
+            "%18.15f\n", f_var2);
+    printf( "The rounding error is        "
+            "%18.15Lf\n\n\n", d_var2 - f_var2);
+    return 0;
 }
 
 /*
