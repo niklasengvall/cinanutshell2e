@@ -9,19 +9,18 @@
 // Updated:     2021-09-17
 // Revised by:  Niklas Engvall
 
-// Description: This code shows how you can use the header complex.h 
-//              The example shows complex numbers and prints the real and imaginary number
+// Description: This code shows how you can use the enum keyword.
 
 #include <stdio.h>
 
 int main() 
 {
     // Example of enumerated types
-    enum color {black, red, orange, yellow, green, blue, indigo, violet, white, transparent = -1};
+    enum color { black, red, orange, yellow, green, blue, indigo, violet, white, transparent = -1 };
     enum color nocolor = transparent, night = black; // Can be set in same scope
     
     // If we omit tags we can define constants, preferable over #define directives
-    enum { FALSE, STOP = 0, TRUE, GO = 1};
+    enum { FALSE, STOP = 0, TRUE, GO = 1 };
     
     // Declare and initiate a variable to a enum value
     int run = TRUE; // Set this to TRUE and rebuild & run the compiled file.
