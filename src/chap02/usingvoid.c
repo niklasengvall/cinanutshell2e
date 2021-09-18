@@ -51,8 +51,8 @@ int main()
     {
         printf("%6d", pNumbers[i]); // Print one of the created random number per loop iteration
         if (i % 10 == 9)            // check if we have printed a segment of 10 numbers
-                                    // with modulus operator, ie if we reach 9, 19, 29...  and i % 10 return 9,
-            putchar('\n');          // then add a newline
+            putchar('\n');          // with modulus operator, ie if we reach 9, 19, 29...  and i % 10 return 9,
+                                    // then add a newline
     }
     
     // Release the storage space to the operating system.
