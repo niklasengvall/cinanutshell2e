@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "gcc-10 - Build and debug active file",
+            "name": "gcc-11 - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "program": "${fileDirname}/${fileBasenameNoExtension}_D",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C Debug: gcc-10 build active file",
+            "preLaunchTask": "C Debug: gcc-11 build active file",
             "miDebuggerPath": "/bin/gdb"
         }
     ]

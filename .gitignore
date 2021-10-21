@@ -4,6 +4,8 @@
 # Exclude compiled stuff
 output/*.out
 *.out
+*_R
+*_D
 
 # Prerequisites
 *.d
