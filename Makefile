@@ -5,7 +5,7 @@
 #
 
 # define the C compiler to use
-CC = gcc-10
+CC = gcc-11
 
 # define any compile-time flags
 CFLAGS	:= -Wall -Wextra -Wpedantic -Wno-missing-braces -g -Og -std=c17
