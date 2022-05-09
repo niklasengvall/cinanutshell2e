@@ -41,12 +41,12 @@ int main()
     
 
     // Use enum in an if conditional statement
-    printf("\nCan we run?\n");
+    printf( "\nCan we run?\n" );
 
     if( run ) // Test if run = TRUE = 1 or more
-        printf("Yeah run = TRUE!\n");
+        printf( "Yeah run = TRUE!\n" );
     else // If zero or negative we run this statement 
-        printf("Nope run = FALSE!\n");
+        printf( "Nope run = FALSE!\n" );
 
     return 0;
 }

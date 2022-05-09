@@ -27,20 +27,20 @@ int main()                           // Definition of main() begins
 
     printf( "%s", string_in ); // print an UTF-8 string
 
-    setlocale(LC_ALL, "sv_SE.utf8"); // Change to your locale i.e en_US for united states english
-    wchar_t wc = L'\x3B1';           // Set a widecharacter variable to the Greek lowercase alpha, wchar_t is defined in stdlib.h
-    char mbStr[10] = "";             // Define space for a multibyte string
-    int nBytes = 0;                  // Stores a negative value for a failed conversion or the number of multibyte characters 
-    nBytes = wctomb(mbStr, wc);      // Convert wide char to (16 or 32 bit) to a multibyte string
-    if( nBytes < 0)                  // Test if the wide character successfully got converted, itherwis print an errormessage
-        puts("Not a valid multibyte character in your locale.");
-    else                             // Print some information about what all the variables contains 
-        printf("nBytes = %d, wc = %d and mbStr = %s\n", nBytes, wc, mbStr);
+    setlocale( LC_ALL, "sv_SE.utf8" ); // Change to your locale i.e en_US for united states english
+    wchar_t wc = L'\x3B1';            // Set a widecharacter variable to the Greek lowercase alpha, wchar_t is defined in stdlib.h
+    char mbStr[10] = "";              // Define space for a multibyte string
+    int nBytes = 0;                   // Stores a negative value for a failed conversion or the number of multibyte characters 
+    nBytes = wctomb( mbStr, wc );     // Convert wide char to (16 or 32 bit) to a multibyte string
+    if( nBytes < 0 )                  // Test if the wide character successfully got converted, itherwis print an errormessage
+        puts( "Not a valid multibyte character in your locale." );
+    else                              // Print some information about what all the variables contains 
+        printf( "nBytes = %d, wc = %d and mbStr = %s\n", nBytes, wc, mbStr );
 
-    printf("mbStr = ");
-    for (int c = 0; c < (int) strlen(mbStr); c++)
-        printf("%X ", (char) mbStr[c]); // Print the multibyte string as hexadecimal values, note just read de last tvo digits
-    printf("\n");
+    printf( "mbStr = " );
+    for( int c = 0; c < (int) strlen( mbStr ); c++ )
+        printf( "%X ", (char) mbStr[c] ); // Print the multibyte string as hexadecimal values, note just read de last tvo digits
+    printf( "\n" );
 
     return 0; // Returns zero to the process that called this function (often your operating system)
 }

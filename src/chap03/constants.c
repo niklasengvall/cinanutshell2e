@@ -6,11 +6,11 @@
 
 // File:        constants.c 
 // Created:     2022-02-06 
-// Updated:     2021-02-06
+// Updated:     2022-05-10
 // Revised by:  Niklas Engvall
 
 // Description: This code shows different constants in C 
-//              It prints out different constans and lets the user input numbers
+//              It prints out different constants and calculations also it lets the user input a character
 
 #include <stdio.h>
 #include <math.h>
@@ -37,10 +37,10 @@ int main()
     const wchar_t copyright = L'©'; // (C) character
     
     // declare and init a keypress storage code
-    int c = 0;
-
+    wint_t c = 0;
+    
     // Calculate suns volume
-    long double sun_volume = (long double)( 4 * accurate_pi * pow(sun_radius,3 )) / 3;
+    long double sun_volume = (long double) (4 * accurate_pi * pow(sun_radius, 3 )) / 3;
 
     // Print some const examples
     printf( "I'm %d years old. The size of the constant \"age\" is %ld byte.\n", age, sizeof(age) );
@@ -54,8 +54,13 @@ int main()
     printf( "The copyright sign %lc, has the code %d.\n", copyright, copyright  );
     printf( "Enter a character: " );
     
-    c = getchar();
-    printf( "Your input character was: \'%c\', and the ASCII code is: %d \n", c, c );  
-    
+    // Get a wide character 
+    c = getwchar();
+    if( c == WEOF ) {
+        printf( "A read error or end of file condition occured with getwchar!" );
+        return 1; // Return to system with error code 1
+    }
+
+    printf( "Your input character was: \'%lc\', and the UTF code is: %X in hexadecimal.\n", c, c );  
     return 0;
 }

@@ -17,13 +17,13 @@
 int main() 
 {
     // Declare and initiate an pointer to an array with data type int
-    int value[5] = { 1, 3, 5, 7};
+    int value[5] = { 1, 3, 5, 7 };
     int *v = value; // pointer to value
     long mem = (long) v; 
 
-    printf("Variablename Type Content Size _Alignof Memory\n");
-    for (int c = 0; c < 4; c++)
-        printf("*v           int  %d       %ld    %ld        %lxd\n", *v++, sizeof(int), _Alignof(int), mem += sizeof(int));
+    printf( "Variablename Type Content Size _Alignof Memory\n" );
+    for( int c = 0; c < 4; c++ )
+        printf( "*v           int  %d       %ld    %ld        %lxd\n", *v++, sizeof( int ), _Alignof( int ), mem += sizeof( int ) );
 
     return 0;
 }

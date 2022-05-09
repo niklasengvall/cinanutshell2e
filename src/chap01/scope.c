@@ -24,8 +24,8 @@ long calc( double x );  // Prototypes variable declaration doesn't need to be th
 
 int main() 
 {
-    long x = calc(2.5);   // Declare a long variable x with block scope
-    printf("long x = %ld\n", x); // %ld means print value as a long int
+    long x = calc( 2.5 );   // Declare a long variable x with block scope
+    printf( "long x = %ld\n", x ); // %ld means print value as a long int
 
     if( x < 0 )           // Here x refers to the block declared long x variable
     {
@@ -34,7 +34,7 @@ int main()
     }
     
     x *= 2;               // Here x again refers to the block declared long x variable
-    printf("after operation x *= 2, long x = %ld\n", x); 
+    printf( "after operation x *= 2, long x = %ld\n", x ); 
     
     return 0;
 }

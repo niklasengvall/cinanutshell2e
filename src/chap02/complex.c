@@ -19,13 +19,13 @@ int main()
 {
     double complex z = 1.0 + 2.0 * I;
  
-     printf( "z = 1.0 + 2.0i = %.2lf .\n", z);
-     printf( "Values of complex number z: z = .2lf + %.2lfi\n", creal( z ), cimag( z ));   //computing real and imaginary part of z
+     printf( "z = 1.0 + 2.0i = %.2lf .\n", z );
+     printf( "Values of complex number z: z = .2lf + %.2lfi\n", creal(z), cimag(z) );   //computing real and imaginary part of z
      
      z *= I; // Rotate z 90 degrees counterclockwise
      
      printf( "After rotation 90 degrees counterclockwise, z = %.2lf .\n", z);
-     printf( "And values of complex number z: z = %.2lf + %.2lfi\n", creal( z ), cimag( z ));   //computing real and imaginary part of z
+     printf( "And values of complex number z: z = %.2lf + %.2lfi\n", creal(z), cimag(z) );   //computing real and imaginary part of z
      
     return 0;
 }

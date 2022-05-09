@@ -22,29 +22,29 @@ enum {e_unknown, e_nomem, e_badaddr}; // e_unknown = 0, e_nomem = 1 ...
 
 void error_exit(unsigned int error_n)   // Print a last error message
 {                                       // and exit the program.
-    char * error_msg[] = {"Unknown error code.\n",
-                          "Insufficient memory.\n",
-                          "Illegal memory access.\n"};
-    unsigned int arr_len = sizeof(error_msg)/sizeof(char *); // returns numbers of errormessages
+    char * error_msg[] = { "Unknown error code.\n",
+                           "Insufficient memory.\n",
+                           "Illegal memory access.\n" };
+    unsigned int arr_len = sizeof( error_msg ) / sizeof( char * ); // returns numbers of errormessages
 
-    if(error_n >= arr_len) // If caller sets a error_n equals to 3 or more, set errormessage to unknown error code
+    if( error_n >= arr_len ) // If caller sets a error_n equals to 3 or more, set errormessage to unknown error code
         error_n = 0;
-    fputs(error_msg[error_n], stderr); // Otherwise print the error code to standard error console
-    exit(1); // Exit to calling routine (operating system) and return 1
+    fputs( error_msg[error_n], stderr ); // Otherwise print the error code to standard error console
+    exit( 1 ); // Exit to calling routine (operating system) and return 1
 }
 
 int main()
 {  
     char msg[] = "The installation of " PRG_NAME // Concatenate the string with the defined prefix
                  " is now complete.";    
-    puts(msg); // Print the message to the cosole
+    puts( msg ); // Print the message to the cosole
     
     char *p = msg + 100; // Declare and initiate a char pointer to the start of the adress where string msg is + 100
                          // Try to change the value 100 to 20, and run the debugger
-    if(p > msg + strlen(msg)) // if the memory address of p is bigger than the memory address of msg + it's length
-       error_exit(e_badaddr); // print "Illegal memory access"
+    if( p > msg + strlen( msg )) // if the memory address of p is bigger than the memory address of msg + it's length
+       error_exit( e_badaddr ); // print "Illegal memory access"
 
-    puts(p); // This line won't be executed
+    puts( p ); // This line won't be executed
 
     return EXIT_SUCCESS;
 }

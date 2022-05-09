@@ -21,7 +21,7 @@ int test_func( char *s)
 {
     if ( s == NULL ) 
     { 
-        fprintf(stderr, "%s: recieved null pointer argument.\n", __func__);
+        fprintf( stderr, "%s: recieved null pointer argument.\n", __func__ );
         return -1;
     } 
     else
@@ -35,12 +35,12 @@ int main() // Definition of main() begins
     char *ptr = "Hello there!"; // Test to comment this line and uncomment next line and rebuild and execute this file 
     //char *ptr = NULL;    // Point to NULL to simulate an error.
     
-    printf("You are now in the function: %s.\n", __func__);
-    rv = test_func(ptr); // Calls the already defined test_func
+    printf( "You are now in the function: %s.\n", __func__ );
+    rv = test_func( ptr ); // Calls the already defined test_func
     
-    if (rv == -1) {      // Test if we should output an error mesage 
+    if( rv == -1 ) {      // Test if we should output an error mesage 
         printf( "Exiting from function: %s.\n", __func__ );
-        exit(rv); // Exit to the calling process, often your operating system
+        exit( rv ); // Exit to the calling process, often your operating system
     }
     else 
         printf( "You are now back in the function: %s and exits it normally.\n", __func__ );   

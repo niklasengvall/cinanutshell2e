@@ -22,9 +22,9 @@ int main()
     printf("The character %c has the character code %d.\n", c, c );
 
     // Loop through the alphabet
-    for( c = 'A'; c <= 'Z'; ++c)
-        printf("%2c", c); // The format %2c prints every character with a space before
+    for( c = 'A'; c <= 'Z'; ++c )
+        printf( "%2c", c ); // The format %2c prints every character with a space before
 
-    printf("\n"); // Just put out a newline so the terminal prompt start on a newline beneath the printed row.
+    printf( "\n" ); // Just put out a newline so the terminal prompt start on a newline beneath the printed row.
     return 0;
 }

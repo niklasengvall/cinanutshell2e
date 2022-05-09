@@ -9,7 +9,7 @@
 // Updated:     2021-09-10
 // Revised by:  Niklas Engvall
 
-// Description: This code tests if we get an overflow on tree data types.
+// Description: This code tests if we get an overflow on tree signed data types.
 //              You need to take precaution if you add above any data type MAX values.
 
 #include <stdio.h>
@@ -24,8 +24,13 @@ int main()
     char char_value = CHAR_MAX;
     short short_value = SHRT_MAX;
     int int_value = INT_MAX;
+    
+    // Added to show a better test
+    char value1 = CHAR_MAX - 3;     // Change this -3 to -10 or more and run a test again
+    char value2 = 10;
 
     // Add 1 to all variables and store them in new variables
+    // Avoid under all circumstances, do a test, check below
     char new_char_value = char_value + 1;
     short new_short_value = short_value + 1;
     int new_int_value = int_value + 1;
@@ -37,7 +42,7 @@ int main()
     printf( "%-9s  %-10d  %-d\n", dt[1], short_value, new_short_value );
     printf( "%-9s  %-10d  %-d\n", dt[2], int_value, new_int_value );
     
-    // Do some tests
+    // Do some tests, quite inaccurate cause of undefined error
     if( new_char_value < char_value + 1 )
         printf( "There is an overflow error in your char value.\n" );
 
@@ -47,5 +52,17 @@ int main()
     if( new_int_value <  int_value + 1 )
         printf( "There is an overflow error in your int value.\n" );
 
+    // Do a better test before we add 10 to value1
+    if ( value1 > CHAR_MAX - value2 ) { // compare 124 > 127 - 10 => false => else condition runs
+        printf( "There will be an overflow error in your char %d value.\n", value1 );
+        return -1; 
+    }
+    else { // If no overflow error make some calculation with addition
+        value1 = value1 + value2;
+        printf( "After addition value1 is now: %d,\n", value1 );
+        return 0;
+    }
+    
+    // This line won't run at all
     return 0;
 }
