@@ -1,5 +1,5 @@
 // Own example 
-// Page:        50-51
+// Page:        50-53
 
 // Attribution: C in a Nutshell, 2nd Edition by Peter Prinz and Tony Crawford (Oeilly).
 //              © 2016 Peter Prinz, Tony Crawford, 978-1-491-90475-6
@@ -13,7 +13,7 @@
 
 
 #include <stdio.h>
-#include <float.h>
+#include <float.h> // I use the definitions for different types of digitlimits
 
 //           123456789012345678 
 #define PI 3.141592653589793238
