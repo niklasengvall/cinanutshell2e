@@ -47,7 +47,7 @@
                 }
             ],
             "preLaunchTask": "C Debug: gcc-11 build active file",
-            "miDebuggerPath": "/bin/gdb"
+            "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
