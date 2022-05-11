@@ -18,6 +18,7 @@
 
 #define ARR_LEN 20      // Define the array size to 20 elements
 
+// Function declaration
 int floatcmp( const void* p1, const void* p2 );
 
 // The main() function sorts an array of float, using the 
